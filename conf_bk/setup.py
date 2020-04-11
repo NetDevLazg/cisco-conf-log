@@ -1,7 +1,6 @@
 import yaml
 from sys import argv
 import os
-from env_variables import ubuntu_user
 
 def get_schedule():
     with open(r'schedules.yml') as file:
@@ -9,7 +8,7 @@ def get_schedule():
     return parse_data['schedules']
 
         
-crontab = open("/var/spool/cron/crontabs/{user}".format(user=ubuntu_user),'w+')
+crontab = open("/var/spool/cron/crontabs/root")
 
 schedules = get_schedule()
 
