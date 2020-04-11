@@ -1,4 +1,8 @@
 #!/bin/bash
+echo "###########################################################"
+echo "Installing System Requirement and Python Library"
+echo "###########################################################"
+sleep 2
 #---------------------------------------------------------------------------------------------------------
 # Creates the env_variables.py file for the user to input their custom variables
 echo '''
@@ -49,7 +53,30 @@ apt-get install libsystemd-dev
 sudo -H /usr/bin/pip3 install -r ~/cisco-conf-log/requirements.txt --user
 # Install all the python requirements for the user running the command
 /usr/bin/pip3 install -r ~/cisco-conf-log/requirements.txt --user
+echo "###########################################################"
+echo "System Requirement and Python Libs are Installed"
+echo "###########################################################"
+sleep 2
+#---------------------------------------------------------------------------------------------------------
+echo "###########################################################"
+echo "Installing Config Backup Tool"
+echo "###########################################################"
+# Creates the cron jobs to pull the devices configurations
+$(which python3) ~/cisco-conf-log/conf_bk/setup.py
+
+echo "You can verify that the cron jobs are installed using the command: crontab -l"
+echo "Please do not edit this user cron jobs manually because they will be overwritten"
+
+echo "###########################################################"
+echo "Config Backup Tool Installed"
+echo "###########################################################"
+sleep 2
+#---------------------------------------------------------------------------------------------------------
 # Copy the folder into the /op/ directory in order to create the service in systemd
+echo "###########################################################"
+echo "Installing Logger Service"
+echo "###########################################################"
+sleep 2
 cp -r ~/cisco-conf-log /opt/
 #
 # Creates service file for cisco-conf-log service
@@ -78,5 +105,5 @@ systemctl enable cisco-conf-log
 echo "###########################################################"
 echo "Logger Service has been installed"
 echo "###########################################################"
-sleep 5
+sleep 2
 #---------------------------------------------------------------------------------------------------------
