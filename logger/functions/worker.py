@@ -9,8 +9,8 @@ import base64
 from time import sleep
 import requests
 import json
-from ..env_variables import FILE_PATH
-from ..env_variables import WEBEX_WEBHOOK
+from functions.env_variables import FILE_PATH
+from functions.env_variables import WEBEX_WEBHOOK
 from functions.logging import myLogger
 
 

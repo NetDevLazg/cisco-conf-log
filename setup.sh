@@ -38,7 +38,7 @@ apt-get install build-essential
 apt-get install libsystemd-dev
 #
 #
-/usr/bin/pip3 install -r ~/cisco-conf-log/requirements.txt --user
+/usr/bin/pip3 install -H -r ~/cisco-conf-log/requirements.txt --user
 #
 #
 cp -r ~/cisco-conf-log /opt/
@@ -61,6 +61,9 @@ ExecStart=/usr/bin/python3 /opt/cisco-conf-log/logger/main.py
 WantedBy=multi-user.target
 " > /etc/systemd/system/cisco-conf-log.service
 #
+cp ~/cisco-conf-log/env_variables.py ~/cisco-conf-log/logger/env_variables.py
+cp ~/cisco-conf-log/env_variables.py ~/cisco-conf-log/logger/functions/env_variables.py
+#
 systemctl start cisco-conf-log
 #
 systemctl enable cisco-conf-log
@@ -74,7 +77,6 @@ cp ~/cisco-conf-log/schedules.yml ~/cisco-conf-log/conf_bk/schedules.yml
 #
 cp ~/cisco-conf-log/env_variables.py ~/cisco-conf-log/conf_bk/env_variables.py
 #
-cp ~/cisco-conf-log/env_variables.py ~/cisco-conf-log/logger/env_variables.py
 #
 $(which python3) ~/cisco-conf-log/conf_bk/setup.py
 #
