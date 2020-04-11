@@ -64,7 +64,6 @@ After=network.target
 
 [Service]
 Type=simple
-User=ubuntu
 ExecStart=/usr/bin/python3 /opt/cisco-conf-log/logger/main.py
 
 [Install]
@@ -76,5 +75,8 @@ systemctl start cisco-conf-log
 # create a system link in order for the tool to start after reboots
 systemctl enable cisco-conf-log
 #
+echo "###########################################################"
 echo "Logger Service has been installed"
-#
+echo "###########################################################"
+sleep 5
+#---------------------------------------------------------------------------------------------------------
