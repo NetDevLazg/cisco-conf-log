@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/py_logger
+cd ~/cisco-conf-log
 #
 echo '''
 # Update with Server IP or Leaves as is if you want to automatically select the Server IP.
@@ -20,8 +20,8 @@ cisco_password = ''
 cisco_username = ''
 
 # Do not modify
-FILE_PATH = "/home/{user}/py_logger/conf_bk/config_backups".format(user=ubuntu_user)
-''' > ~/py_logger/env_variables.py
+FILE_PATH = "/home/{user}/cisco-conf-log/conf_bk/config_backups".format(user=ubuntu_user)
+''' > ~/cisco-conf-log/env_variables.py
 #
 apt-get update
 #
@@ -39,45 +39,45 @@ apt-get install build-essential
 apt-get install libsystemd-dev
 #
 #
-/usr/bin/pip3 install -r ~/py_logger/requirements.txt --user
+/usr/bin/pip3 install -r ~/cisco-conf-log/requirements.txt --user
 #
 #
-cp -r ~/py_logger /opt/
+cp -r ~/cisco-conf-log /opt/
 #
 #
-touch /etc/systemd/system/py_logger.service
+touch /etc/systemd/system/cisco-conf-log.service
 #
 
 #
 echo "
 [Unit]
-Description=Py_Logger Service
+Description=cisco-conf-log Service
 After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3 /opt/py_logger/logger/main.py
+ExecStart=/usr/bin/python3 /opt/cisco-conf-log/logger/main.py
 
 [Install]
 WantedBy=multi-user.target
-" > /etc/systemd/system/py_logger.service
+" > /etc/systemd/system/cisco-conf-log.service
 #
-systemctl start py_logger
+systemctl start cisco-conf-log
 #
-systemctl enable py_logger
+systemctl enable cisco-conf-log
 #
 #
 echo "Logger Service has been installed"
 #
 echo "Installing Configuration Backup"
 #
-cp ~/py_logger/schedules.yml ~/py_logger/conf_bk/schedules.yml
+cp ~/cisco-conf-log/schedules.yml ~/cisco-conf-log/conf_bk/schedules.yml
 #
-cp ~/py_logger/env_variables.py ~/py_logger/conf_bk/env_variables.py
+cp ~/cisco-conf-log/env_variables.py ~/cisco-conf-log/conf_bk/env_variables.py
 #
-cp ~/py_logger/env_variables.py ~/py_logger/logger/env_variables.py
+cp ~/cisco-conf-log/env_variables.py ~/cisco-conf-log/logger/env_variables.py
 #
-$(which python3) ~/py_logger/conf_bk/setup.py
+$(which python3) ~/cisco-conf-log/conf_bk/setup.py
 #
 echo "Configuration Backup Installed"
 #

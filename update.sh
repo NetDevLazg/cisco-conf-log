@@ -1,14 +1,14 @@
 
 cd ~/
 #
-systemctl stop py_logger
+systemctl stop cisco-conf-log
 #
-cd ~/py_logger
+cd ~/cisco-conf-log
 #
 git pull
 #
 sleep 2m
 #
-cp -r ~/py_logger /opt/
+cp -r ~/cisco-conf-log /opt/
 #
-systemctl start py_logger
+systemctl start cisco-conf-log
