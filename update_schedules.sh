@@ -10,5 +10,5 @@ $(which python3) ~/cisco-conf-log/conf_bk/setup.py
 
 echo "###########################################################"
 echo "Completed - CRON Jobs have been updated"
-echo "You can check using the command crontab -l"
+echo "You can check using the command sudo crontab -l"
 echo "###########################################################"

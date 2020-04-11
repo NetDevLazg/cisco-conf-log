@@ -13,5 +13,3 @@ ubuntu_user = "ubuntu"
 # Must Update with a valid Cisco Users Credential in order to download config and do other tasks.
 cisco_username = "cisco"
 cisco_password = "cisco"
-# Do not modify
-FILE_PATH = "/home/{user}/cisco-conf-log/conf_bk/config_backups".format(user=ubuntu_user)

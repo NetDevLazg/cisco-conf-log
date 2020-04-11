@@ -9,12 +9,13 @@ import base64
 from time import sleep
 import requests
 import json
-from functions.env_variables import FILE_PATH
 from functions.env_variables import WEBEX_WEBHOOK
 from functions.logging import myLogger
 
-
 webex_url = WEBEX_WEBHOOK
+
+# Do not modify
+FILE_PATH = "/opt/cisco-conf-log/conf_bk/config_backups"
 
 webex_header = {
     'Content-Type': "application/json",
