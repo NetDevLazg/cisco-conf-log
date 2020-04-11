@@ -6,10 +6,13 @@
 sudo apt install git -y
 ```
 
-### 2.Once git is install please clone the repo into the following directory /home/user/
+### 2.Once git is install please clone the repo into the following directory /opt/
+
+#### Jump into sudo user and do not exit since everything will be installed under the root user.
 
 ```
-cd ~/
+cd /opt/
+sudo su
 git clone https://github.com/NetDevLazg/cisco-conf-log.git
 ```
 

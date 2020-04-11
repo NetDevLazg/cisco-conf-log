@@ -41,7 +41,7 @@ echo "###########################################################"
 # Creates the cron jobs to pull the devices configurations
 $(which python3) /opt/cisco-conf-log/conf_bk/setup.py
 
-echo "You can verify that the cron jobs are installed using the command: crontab -l"
+echo "You can verify that the cron jobs are installed using the command: sudo crontab -l"
 echo "Please do not edit this user cron jobs manually because they will be overwritten"
 
 echo "###########################################################"
