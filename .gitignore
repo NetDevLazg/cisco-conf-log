@@ -1,0 +1,6 @@
+.vscode
+__pycache__/
+env_variables.py
+conf_bk/env_variables.py
+conf_bk/schedules.yml
+logger/env_variables.py
