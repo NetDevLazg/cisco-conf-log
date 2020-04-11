@@ -1,5 +1,5 @@
 schedules:
-  - site_name: FLL1
+  - site_name: DMVPN
     time: 5 * * * *
     hosts:
        FLL1-ROUTER: 10.199.199.1:cisco_ios
