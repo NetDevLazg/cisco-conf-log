@@ -1,11 +1,11 @@
 schedules:
   - site_name: DMVPN
-    time: 5 * * * *
+    time: "*/5 * * * *"
     hosts:
        FLL1-ROUTER: 10.199.199.1:cisco_ios
 
   - site_name: MPLS
-    time: 5 * * * *
+    time: "*/5 * * * *"
     hosts:
        PHX1-MPLS: 10.199.199.6:cisco_ios
        SDF4-MPLS: 10.199.199.8:cisco_ios
