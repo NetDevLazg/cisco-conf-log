@@ -8,7 +8,7 @@ def get_schedule():
     return parse_data['schedules']
 
         
-crontab = open("/var/spool/cron/crontabs/root")
+crontab = open("/var/spool/cron/crontabs/root","w+")
 
 schedules = get_schedule()
 
