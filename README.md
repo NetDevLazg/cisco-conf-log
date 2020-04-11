@@ -55,12 +55,21 @@ sudo ./conf_bk_setup.sh
 
 ### 6. At this step you have confirmed that the tool is backing up the configs at the desire time. So now we will proceed and install the logger. The logger is the one that will trigger a python worker to comprate the configs between the device and the backed up configs. On this step you wont see anything yet because we still need to send syslogs to this server from the devices so not to worrie.
 
-#### To install the logger make sure you are on the directory /op/cisco-conf-log/ then run the following command:
+### Lets start by creating a Webex Space, This step I wont demostrate but if you use Webex and pretty sure you know how create a space.
+
+#### To create the Webhook go to the below page, once there click on Connect and loging:
+https://apphub.webex.com/teams/applications/incoming-webhooks-cisco-systems
+
+#### Scroll down and give the Webhook a name and assign it to the space created. Below a link will appear and thats the one you need to copy and update the file "env_variables.py"
+
+### 7. To install the logger make sure you are on the directory /op/cisco-conf-log/ then run the following command:
 ```
 sudo ./logger_setup.sh
 ```
 
-### 7. After the installation is done you should be able to verify using the following command:
+#### After the installation is done you should be able to verify using the following command:
+#### By default the logger listens for messages on port 10000
+
 ```
 systemctl status cisco-conf-log
 ```
