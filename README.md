@@ -26,19 +26,19 @@ git clone https://github.com/NetDevLazg/cisco-conf-log.git
   - site_name: DMVPN
     time: 5 * * * *
     hosts:
-       FLL1-ROUTER: 10.199.199.1:cisco_ios
+       ROUTER-DMVPN-1: 10.199.199.1:cisco_ios
 
   - site_name: MPLS
     time: 5 * * * *
     hosts:
-       PHX1-MPLS: 10.199.199.6:cisco_ios
-       SDF4-MPLS: 10.199.199.8:cisco_ios
-       IAD1-MPLS: 10.199.199.4:cisco_ios
+       MPLS-ROUTER-1: 10.199.199.6:cisco_ios
+       MPLS-ROUTER-2: 10.199.199.8:cisco_ios
+       MPLS-ROUTER-3: 10.199.199.4:cisco_ios
 ```
 
 ### 5. Now we will proceed and install some system requierements and python3 library along with the config backup tool.
 
 #### Run the following command:
 ```
-sudo ./conf_bk_setup.sh -y
+sudo ./conf_bk_setup.sh
 ```
