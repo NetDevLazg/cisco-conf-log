@@ -9,10 +9,10 @@ SERVER_IP = "0.0.0.0"
 SERVER_PORT = 10000
 
 # Must Update with your Webex Webhook Link
-WEBEX_WEBHOOK = ""
+WEBEX_WEBHOOK = "https://webex_webhook.com"
 
 # Must Update with your users on the Ubuntu Server this is being installed on.
-ubuntu_user = "${whoami}"
+ubuntu_user = "ubuntu"
 
 # Must Update with a valid Cisco Users Credential in order to download config and do other tasks.
 cisco_password = "cisco"
@@ -38,7 +38,7 @@ apt-get install build-essential
 apt-get install libsystemd-dev
 #
 #
--H /usr/bin/pip3 install -r ~/cisco-conf-log/requirements.txt --user
+/usr/bin/pip3 install -r ~/cisco-conf-log/requirements.txt --user
 #
 #
 cp -r ~/cisco-conf-log /opt/
