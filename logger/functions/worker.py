@@ -61,7 +61,7 @@ def open_file(device_name):
 
 def worker(ip,username,password):
     #print("Worker has started but is going to sleep for 1 min.")
-    #sleep(60)
+    #sleep(1)
     try:
         net_connect = ConnectHandler( device_type="cisco_ios", ip=ip,
                         username=username, password=password)
@@ -98,16 +98,12 @@ def worker(ip,username,password):
     diff = difflib.Differ().compare(last_config, running_config[0])
 
     device_compare = configs_check(diff)
-#    print('\n'.join(device_compare))
 
     payload = str('\n'.join(device_compare))
     log.info("WORKER: Sending Webhook to teams chat: {}".format(device_name))
     print("INFO: Sending Webhook to teams chat: {}".format(device_name))
 
     header = "Config Change Detected on - {}".format(device_name)
-
- #   device_data = '{{"text": "+--------+ Config Change Detected on - {} +--------+"}}'.format(device_name)
- #   webhook = requests.post(webex_url,headers=webex_header,data=device_data)
 
     lines = "#######################################################"
     config_data = {"text": lines + "\n " + header + "\n" + lines + "\n" + payload}

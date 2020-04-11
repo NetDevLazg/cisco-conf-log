@@ -23,10 +23,3 @@ def configs_check(difflist):
         if ln[0] == '-' and len(ln) >= 4:
             cont.append(ln[0:])
     return cont
-
-#    for ln in difflist:
-#        if ln[0] == '+':
-#            cont.append(ln[0:])
-#        if ln[0] == '-':
-#            cont.append(ln[0:])
-#    return cont

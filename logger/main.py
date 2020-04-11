@@ -13,13 +13,6 @@ from functions.logging import myLogger
 
 
 
-
-#from systemd import journal
-#import logging
-#log = logging.getLogger('python_logger')
-#log.addHandler(journal.JournaldLogHandler())
-#log.setLevel(logging.DEBUG)
-
 log = myLogger("pythong_logger")
 
 # Create a TCP/IP socket
