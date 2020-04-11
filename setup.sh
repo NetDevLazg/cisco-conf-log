@@ -78,7 +78,7 @@ cp ~/cisco-conf-log/schedules.yml ~/cisco-conf-log/conf_bk/schedules.yml
 cp ~/cisco-conf-log/env_variables.py ~/cisco-conf-log/conf_bk/env_variables.py
 #
 #
-/usr/bin/python3' ~/cisco-conf-log/conf_bk/setup.py
+/usr/bin/python3 ~/cisco-conf-log/conf_bk/setup.py
 #
 echo "Configuration Backup Installed"
 #
