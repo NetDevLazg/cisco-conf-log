@@ -18,13 +18,13 @@ git clone https://github.com/NetDevLazg/cisco-conf-log.git
 
 ### 3.We will start by updating the enviroment varaibles under the file "env_varaibles.py". Please make sure you update the following variables. Dont worrie just yet about the WEBEX_WEBHOOK URL.
 
-1. ubuntu_user
-2. cisco_username
-3. cisco_password
+1. cisco_username
+2. cisco_password
 
 
-### 4.After the env_varibales are updated we will update the "schedules.yml" file with the devices you want to backup the configurations. Pleae note the configs will be saved on /conf_bk/config_backups/
-#### Example:
+### 4.After the env_varibales are updated we will update the "schedules.yml" file with the devices you want to backup the configurations. Pleae note the configs will be saved on /opt/cisco-conf-log/conf_bk/config_backups/
+
+#### NONET: Please note that the cron time below means it will download the config every 5 minutes. Please adjust accordingly. If your only testig with a few devices then just leave as is and it will download the configs every 5 min.
 ```schedules:
   - site_name: DMVPN
     time: 5 * * * *
@@ -46,8 +46,6 @@ git clone https://github.com/NetDevLazg/cisco-conf-log.git
 sudo ./conf_bk_setup.sh
 ```
 
-#### Once the conf_bk_setup.sh is done please install additional python3 packages for the local users
+#### At this point you need to check that the root cron jobs have been modified and that the system is downloading the device configurations and being saved. To check the root cron jobs use the following command while being under the root user : crontab -l
 
-```
-pip3 install -r requirements.txt
-```
+#### If you setup the tool to backup the configs over night or on a specific date/time please wait untill you see this is working before proceeding.
