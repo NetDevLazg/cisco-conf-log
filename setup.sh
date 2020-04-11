@@ -38,7 +38,7 @@ apt-get install build-essential
 apt-get install libsystemd-dev
 #
 #
-/usr/bin/pip3 install -r ~/cisco-conf-log/requirements.txt --user
+sudo -H /usr/bin/pip3 install -r ~/cisco-conf-log/requirements.txt --user
 #
 #
 cp -r ~/cisco-conf-log /opt/
