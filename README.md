@@ -42,3 +42,9 @@ git clone https://github.com/NetDevLazg/cisco-conf-log.git
 ```
 sudo ./conf_bk_setup.sh
 ```
+
+#### Once the conf_bk_setup.sh is done please install additional python3 packages for the local users
+
+```
+pip3 install -r requirements.txt
+```

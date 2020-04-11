@@ -30,7 +30,6 @@ apt-get install libsystemd-dev
 # Install all the python requirements for the root user since he will be running the logger tool
 sudo -H /usr/bin/pip3 install -r ~/cisco-conf-log/requirements.txt --user
 # Install all the python requirements for the user running the command
-/usr/bin/pip3 install -r ~/cisco-conf-log/requirements.txt
 echo "###########################################################"
 echo "System Requirement and Python Libs are Installed"
 echo "###########################################################"
