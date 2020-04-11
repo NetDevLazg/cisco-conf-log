@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd ~/cisco-conf-log
 #
 echo '''
 # Update with Server IP or Leaves as is if you want to automatically select the Server IP.
@@ -13,11 +12,11 @@ SERVER_PORT = 10000
 WEBEX_WEBHOOK = ""
 
 # Must Update with your users on the Ubuntu Server this is being installed on.
-ubuntu_user = ''
+ubuntu_user = "${whoami}"
 
 # Must Update with a valid Cisco Users Credential in order to download config and do other tasks.
-cisco_password = ''
-cisco_username = ''
+cisco_password = "cisco"
+cisco_username = "cisco"
 
 # Do not modify
 FILE_PATH = "/home/{user}/cisco-conf-log/conf_bk/config_backups".format(user=ubuntu_user)
@@ -51,7 +50,7 @@ touch /etc/systemd/system/cisco-conf-log.service
 #
 echo "
 [Unit]
-Description=cisco-conf-log Service
+Description=Cisco Config Change Logger Service
 After=network.target
 
 [Service]
