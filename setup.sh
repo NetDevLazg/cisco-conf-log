@@ -38,7 +38,7 @@ apt-get install build-essential
 apt-get install libsystemd-dev
 #
 #
-/usr/bin/pip3 install -H -r ~/cisco-conf-log/requirements.txt --user
+-H /usr/bin/pip3 install -r ~/cisco-conf-log/requirements.txt --user
 #
 #
 cp -r ~/cisco-conf-log /opt/
@@ -78,7 +78,7 @@ cp ~/cisco-conf-log/schedules.yml ~/cisco-conf-log/conf_bk/schedules.yml
 cp ~/cisco-conf-log/env_variables.py ~/cisco-conf-log/conf_bk/env_variables.py
 #
 #
-$(which python3) ~/cisco-conf-log/conf_bk/setup.py
+/usr/bin/pip3 ~/cisco-conf-log/conf_bk/setup.py
 #
 echo "Configuration Backup Installed"
 #
