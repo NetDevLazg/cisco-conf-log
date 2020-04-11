@@ -51,3 +51,16 @@ sudo ./conf_bk_setup.sh
 #### At this point you need to check that the root cron jobs have been modified and that the system is downloading the device configurations and being saved. To check the root cron jobs use the following command while being under the root user : crontab -l
 
 #### If you setup the tool to backup the configs over night or on a specific date/time please wait untill you see this is working before proceeding.
+
+
+### 6. At this step you have confirmed that the tool is backing up the configs at the desire time. So now we will proceed and install the logger. The logger is the one that will trigger a python worker to comprate the configs between the device and the backed up configs. On this step you wont see anything yet because we still need to send syslogs to this server from the devices so not to worrie.
+
+#### To install the logger make sure you are on the directory /op/cisco-conf-log/ then run the following command:
+```
+sudo ./logger_setup.sh
+```
+
+### 7. After the installation is done you should be able to verify using the following command:
+```
+systemctl status cisco-conf-log
+```
