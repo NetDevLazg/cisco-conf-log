@@ -10,3 +10,11 @@ schedules:
        MPLS-ROUTER1: 10.199.199.6:cisco_ios
        MPLS-ROUTER2: 10.199.199.8:cisco_ios
        MPLS-ROUTER3: 10.199.199.4:cisco_ios
+
+
+  - site_name: TEST100
+    time: "*/5 * * * *"
+    hosts:
+       MPLS-ROUTER1: 10.199.199.6:cisco_ios
+       MPLS-ROUTER2: 10.199.199.8:cisco_ios
+       MPLS-ROUTER3: 10.199.199.4:cisco_ios
