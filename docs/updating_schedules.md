@@ -6,6 +6,7 @@
     2. Enter in root mode with "sudo su"
     3. Run the bash script "update_schedules.sh"
 
+## Example:
 ```
 cd /opt/cisco-conf-log/
 sudo su
