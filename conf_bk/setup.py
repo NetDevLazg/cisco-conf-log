@@ -21,7 +21,7 @@ cron.write()
 for entry in schedules:
     site = entry['site_name']
     time = entry['time']
-    job.set_comment("Job to backup the configurations for the site {}".format(site))
+    comment = cron.set_comment("Job to backup the configurations for the site {}".format(site))
     job = cron.new(command="cd {dir}/conf_bk && $(which python3) main.py {site}".format(dir=directory,site=site))
     job.setall(time)
 
