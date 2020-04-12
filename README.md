@@ -22,3 +22,9 @@ When the Cisco device sends this logs to the server running this tool it will tr
   1. [Installation Guide](docs/installation.md)
   2. [Updating Schedules](docs/updating_schedules.md)
   3. [Updating Environment Variables](docs/updating_env_variables.md)
+
+## Examples
+  1. [BGP Change](docs/images/bgp_change.png)
+  2. [EIGRP Change]()
+  3. [Creating ACL]()
+  4. [Deleting Prefix List]()
