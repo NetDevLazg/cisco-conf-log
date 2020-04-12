@@ -23,17 +23,6 @@ parser cisco_parser {
     cisco-parser (prefix(.SDATA.my-parsed-data.));
 };
 
-log {
-    source(cisco_network);
-    parser(cisco_parser);
-    destination(d_tcp);
-};
-
-log {
-    source(nexus_network);
-    destination(d_tcp);
-};
-
 
 log {
     source(cisco_network);
