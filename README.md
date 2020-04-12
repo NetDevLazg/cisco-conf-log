@@ -95,14 +95,16 @@ sudo ufw allow 518/udp
 #### Cisco NXOS needs to send the syslog on port 518/UDP
 
 #### Example: Cisco IOS
+### Please note that the ip being use is of a device in my lab, use your server IP.
 ```
 logging buffered informational
 logging source-interface Loopback1
 logging host 10.102.1.162
 ```
 #### Example: Cisco NXOS
+### Please note that the ip being use is of a device in my lab, use your server IP.
 ```
 logging source-interface loopback1
 logging server 10.102.1.162 6 port 518 use-vrf default
-no logging rate-limit # some Nexus dont support this command anymore
+no logging rate-limit # some Nexus' dont support this command anymore
 ```
