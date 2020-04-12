@@ -28,3 +28,5 @@ When the Cisco device sends this logs to the server running this tool it will tr
   2. [Delete EIGRP](docs/images/eigrp_change.png)
   3. [Creating ACL](docs/images/acl.png)
   4. [Deleting Prefix List](docs/images/prefix_list.png)
+  
+ [![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/NetDevLazg/cisco-conf-log)
