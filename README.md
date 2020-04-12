@@ -20,3 +20,5 @@ When the Cisco device sends this logs to the server running this tool it will tr
 
 ## Getting Started
   1. [Installation Guide](docs/installation.md)
+  2. [Updating Schedules](docs/updating_schedules.md)
+  3. [Updating Environment Variables]()
