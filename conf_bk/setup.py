@@ -16,12 +16,13 @@ directory = os.getcwd()
 
 cron = CronTab(user='root')
 cron.remove_all()
+cron.write()
 
 for entry in schedules:
     site = entry['site_name']
     time = entry['time']
-    cron = CronTab(user='root')
     job = cron.new(command="cd {dir}/conf_bk && $(which python3) main.py {site}".format(dir=directory,site=site))
     job.setall(time)
-    cron.write()
+
+cron.write()
 
