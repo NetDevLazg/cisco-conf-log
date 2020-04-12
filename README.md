@@ -29,12 +29,12 @@ git clone https://github.com/NetDevLazg/cisco-conf-log.git
 #### If need help with the cron time you can use this tool: https://crontab-generator.org/
 ```schedules:
   - site_name: DMVPN
-    time: 5 * * * *
+    time: */5 * * * *
     hosts:
        ROUTER-DMVPN-1: 10.199.199.1:cisco_ios
 
   - site_name: MPLS
-    time: 5 * * * *
+    time: */5 * * * *
     hosts:
        MPLS-ROUTER-1: 10.199.199.6:cisco_ios
        MPLS-ROUTER-2: 10.199.199.8:cisco_ios
