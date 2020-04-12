@@ -5,9 +5,9 @@
 ```
 sudo apt install git -y
 !
-sudo apt-get install python3
+sudo apt-get install python3 -y
 !
-apt-get install python3-pip
+apt-get install python3-pip -y
 ```
 
 ### 2.Once git is install please clone the repo into the following directory /opt/

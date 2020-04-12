@@ -2,3 +2,4 @@ netmiko>=2.4.1
 requests>=2.20.0
 systemd>=0.16.1
 PyYAML>=5.3.1
+python-crontab>=2.4.1
