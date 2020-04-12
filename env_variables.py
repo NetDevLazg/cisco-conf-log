@@ -1,7 +1,7 @@
 # Update with Server IP or Leaves as is if you want to automatically select the Server IP.
 SERVER_IP = "0.0.0.0"
 
-# Update the port you want to server to listen on or leave as is to use the below port.
+# Do not Modify
 SERVER_PORT = 10000
 
 # Must Update with your Webex Webhook Link
