@@ -1,6 +1,6 @@
 # Updating Environment Variables
 
-#### When modifying any of the environment varaibles you need to run the bash scrip to update this file on other places. Please follow the below steps.
+#### When modifying any of the environment variables you need to run the bash script to update this file on other places. Please follow the below steps.
 
     1. Go to the directory /opt/cisco-conf-log/
     2. Enter in root mode with "sudo su"
