@@ -22,7 +22,7 @@ git clone https://github.com/NetDevLazg/cisco-conf-log.git
 2. cisco_password
 
 
-### 4.After the env_varibales are updated we will update the "schedules.yml" file with the devices you want to backup the configurations. Pleae note the configs will be saved on /opt/cisco-conf-log/conf_bk/config_backups/
+### 4.After the env_varibales are updated we will update the "schedules.yml" file with the devices you want to backup the configurations. Please note the configs will be saved on /opt/cisco-conf-log/conf_bk/config_backups/
 
 #### NONE: Please note that the cron time below means it will download the config every 5 minutes. Please adjust accordingly. If your only testig with a few devices then just leave as is and it will download the configs every 5 min.
 
