@@ -25,6 +25,6 @@ When the Cisco device sends this logs to the server running this tool it will tr
 
 ## Examples
   1. [BGP Change](docs/images/bgp_change.png)
-  2. [EIGRP Change]()
-  3. [Creating ACL]()
-  4. [Deleting Prefix List]()
+  2. [Delete EIGRP](docs/images/eigrp_change.png)
+  3. [Creating ACL](docs/images/acl.png)
+  4. [Deleting Prefix List](docs/images/prefix_list.png)
