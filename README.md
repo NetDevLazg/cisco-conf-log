@@ -7,7 +7,7 @@ sudo apt install git -y
 !
 sudo apt-get install python3 -y
 !
-apt-get install python3-pip -y
+sudo apt-get install python3-pip -y
 ```
 
 ### 2.Once git is install please clone the repo into the following directory /opt/
@@ -66,7 +66,7 @@ sudo ./conf_bk_setup.sh
 
 ### Lets start by creating a Webex Space, This step I wont demostrate but if you use Webex and pretty sure you know how create a space.
 
-#### To create the Webhook go to the below page, once there click on Connect and loging:
+#### To create the Webhook go to the below page, once there click on Connect and log in with your creds:
 https://apphub.webex.com/teams/applications/incoming-webhooks-cisco-systems
 
 #### Scroll down and give the Webhook a name and assign it to the space created. Below a link will appear and thats the one you need to copy and update the file "env_variables.py"
@@ -117,3 +117,5 @@ logging source-interface loopback1
 logging server 10.102.1.162 6 port 518 use-vrf default
 no logging rate-limit # some Nexus' dont support this command anymore
 ```
+
+#### You can verify that the server is receiving the logs by checking the cisco-conf-log proccess "systemctl status cisco-conf-log"
