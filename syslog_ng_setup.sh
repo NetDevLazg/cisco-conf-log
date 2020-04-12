@@ -42,3 +42,7 @@ destination python { syslog("0.0.0.0" transport("tcp") port(10000)); };
 
 # Restarts Syslog-NG
 systemctl restart syslog-ng
+
+echo "###########################################################"
+echo "Completed Installing Syslog-NG Service"
+echo "###########################################################"

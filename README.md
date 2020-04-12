@@ -73,3 +73,36 @@ sudo ./logger_setup.sh
 ```
 systemctl status cisco-conf-log
 ```
+
+### 8. Now the time to install the syslog receiver, We will use a tool called syslog-ng. In order to install the tool please do the following from the directory /op/cisco-conf-log/
+
+```
+sudo ./syslog_ng_setup.sh
+```
+
+#### This bash script will install the syslog-ng tool and will automatically create a syslog forward for incoming syslog messages on port UDP 514 and UDP 518 for Nexus devices. 
+
+#### NOTE: If you have firewall enable on the Ubuntu VM please make sure to allow port 514 UDP and 518 UDP
+
+```
+sudo ufw allow 514/udp
+sudo ufw allow 518/udp
+```
+
+### 9. Last step is now to configue cisco IOS and Cisco NXOS devices to send syslog information to this new server.
+
+#### Cisco IOS needs to send the syslog on the default port 514/UDP
+#### Cisco NXOS needs to send the syslog on port 518/UDP
+
+#### Example: Cisco IOS
+```
+logging buffered informational
+logging source-interface Loopback1
+logging host 10.102.1.162
+```
+#### Example: Cisco NXOS
+```
+logging source-interface loopback1
+logging server 10.102.1.162 6 port 518 use-vrf default
+no logging rate-limit # some Nexus dont support this command anymore
+```
