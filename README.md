@@ -19,4 +19,4 @@ When the Cisco device sends this logs to the server running this tool it will tr
 ![](docs/images/webhook_post.png)
 
 ## Getting Started
-    1. [Installation Guide](docs/installation.md)
+  1. [Installation Guide](docs/installation.md)
