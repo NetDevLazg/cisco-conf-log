@@ -10,3 +10,9 @@ schedules:
        MPLS-ROUTER1: 10.199.199.6:cisco_ios
        MPLS-ROUTER2: 10.199.199.8:cisco_ios
        MPLS-ROUTER3: 10.199.199.4:cisco_ios
+
+
+  - site_name: NXOS
+    time: "*/5 * * * *"
+    hosts:
+       NXOS-SWITCH1: 10.199.199.10:cisco_nxos

@@ -43,6 +43,11 @@ git clone https://github.com/NetDevLazg/cisco-conf-log.git
        MPLS-ROUTER-1: 10.199.199.6:cisco_ios
        MPLS-ROUTER-2: 10.199.199.8:cisco_ios
        MPLS-ROUTER-3: 10.199.199.4:cisco_ios
+
+  - site_name: NXOS
+    time: "*/5 * * * *"
+    hosts:
+       NXOS-SWITCH1: 10.199.199.10:cisco_nxos
 ```
 
 ### 5. Now we will proceed and install some system requierements and python3 library along with the config backup tool.
