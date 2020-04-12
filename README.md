@@ -1,9 +1,13 @@
 # Installation Guide
 
 
-### 1.The first step is start by installing git or if your system has it already the ignore this step.
+### 1.The first step is start by installing git and python3, if your system has it already the ignore this step.
 ```
 sudo apt install git -y
+!
+sudo apt-get install python3
+!
+apt-get install python3-pip
 ```
 
 ### 2.Once git is install please clone the repo into the following directory /opt/

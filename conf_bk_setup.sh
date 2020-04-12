@@ -16,13 +16,6 @@ cp /opt/cisco-conf-log/env_variables.py /opt/cisco-conf-log/conf_bk/env_variable
 # Updates the system reference
 apt-get update
 #
-# Install Python3 to the system
-apt-get install python3
-#
-# Install pip3 to the system
-apt-get install python3-pip
-# Upgrade pip3
-$(which python3) -m pip install --upgrade pip
 # Install an essential librabry for later install systemd via pip3
 apt-get install build-essential
 apt-get install libsystemd-dev
