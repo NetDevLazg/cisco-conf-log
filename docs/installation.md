@@ -12,7 +12,7 @@ sudo apt-get install python3-pip -y
 ```
 
 ### 2.Once git and python3 are installed please clone the repo into the following directory /opt/
-#### This tool must be installed on the lunix directory /opt/
+#### This tool must be installed on the linux directory /opt/
 
 #### Jump into sudo user and do not exit since everything will be installed under the root user.
 
