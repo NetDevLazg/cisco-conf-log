@@ -1,5 +1,6 @@
 # Installation Guide
 
+### Before you start please note that this needs to be installed on linux distribution Ubuntu 18.04
 
 ### 1.The first step is to start by installing git and python3, if your system has it already then ignore this step.
 ```
@@ -11,6 +12,7 @@ sudo apt-get install python3-pip -y
 ```
 
 ### 2.Once git and python3 are installed please clone the repo into the following directory /opt/
+#### This tool must be installed on the lunix directory /opt/
 
 #### Jump into sudo user and do not exit since everything will be installed under the root user.
 
