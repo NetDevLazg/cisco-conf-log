@@ -30,7 +30,7 @@ git clone https://github.com/NetDevLazg/cisco-conf-log.git
 
 ### 4.After the env_varibales are updated we will update the "schedules.yml" file with the devices you want to backup the configurations. Please note the configs will be saved on /opt/cisco-conf-log/conf_bk/config_backups/
 
-#### NONE: Please note that the cron time below means it will download the config every 5 minutes. Please adjust accordingly. If your only testing with a few devices then just leave as is and it will download the configs every 5 min.
+#### NOTE: Please note that the cron time below means it will download the config every 5 minutes. Please adjust accordingly. If your only testing with a few devices then just leave as is and it will download the configs every 5 min. The download of the configs dont need to be often, everynight would be fine because when the tool detects a config change it will update the backed up configs on the server as well.
 
 #### If need help with the cron time you can use this tool: https://crontab-generator.org/
 ```schedules:
